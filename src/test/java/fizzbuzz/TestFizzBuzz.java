@@ -1,32 +1,30 @@
 package fizzbuzz;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import com.nosorio.fizzbuzz.manager.Manager;
+import com.nosorio.fizzbuzz.FizzBuzz;
 
 class TestFizzBuzz {
 	
-	Manager manager = new Manager();
-
     @Test
     public void testFizz() {
-    	Assert.assertEquals("Fizz", manager.verifyNumber(3));
+    	Assertions.assertEquals("Fizz", FizzBuzz.verifyNumber(3));
     }
     
     @Test
     public void testBuzz() {
-    	Assert.assertEquals("Buzz", manager.verifyNumber(5));
+    	Assertions.assertEquals("Buzz", FizzBuzz.verifyNumber(5));
     }
     
     @Test
     public void testFizzBuzz() {
-    	Assert.assertEquals("FizzBuzz", manager.verifyNumber(15));
+    	Assertions.assertEquals("FizzBuzz", FizzBuzz.verifyNumber(15));
     }
     
     @Test
     public void testNonFizzBuzz() {
-    	Assert.assertEquals("1", manager.verifyNumber(1));
+    	Assertions.assertEquals("1", FizzBuzz.verifyNumber(1));
     }
 
 }
